@@ -1,0 +1,7 @@
+[init]
+	defaultBranch = main
+[user]
+	name = xlfrie
+	email = 61897082+marvthedonut@users.noreply.github.com
+[credential]
+	helper = store
