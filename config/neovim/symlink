@@ -1,0 +1,2 @@
+init.lua $HOME/.config/nvim/init.lua
+lazy-lock.json $HOME/.config/nvim/lazy-lock.json
