@@ -192,5 +192,6 @@ gaps inner 10
 
 exec_always --no-startup-id /etc/polybar/launch.sh
 exec_always feh --bg-fill $HOME/Downloads/yxuve5xdpmq91.jpg
+exec_always --no-startup-id picom -d
 
 bindsym $mod+F2 exec firefox
