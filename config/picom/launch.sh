@@ -1,3 +1,3 @@
 killall -q picom
 
-picom
+picom -b
