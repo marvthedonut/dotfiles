@@ -4,6 +4,6 @@ killall -q polybar
 
 
 
-polybar -r bar1 & 
+polybar -r internal & 
 
 echo "Bars launched..."
