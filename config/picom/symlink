@@ -1,2 +1,0 @@
-picom.conf $HOME/.config/picom/picom.conf
-launch.sh $HOME/.config/picom/launch.sh
