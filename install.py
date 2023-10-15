@@ -9,6 +9,16 @@ def main():
     symlinks = get_symlinks()
     make_dirs(symlinks)
     gen_symlinks(symlinks)
+    packages = get_packages()
+    install_packages(packages)
+
+def install_packages(packages):
+    os.system("sudo pacman -Sy --noconfirm " + " ".join(packages))
+
+def get_packages():
+    with open("packages") as f:
+        contents = f.read()
+    return contents.split("\n")
 
 def gen_symlinks(symlinks):
     for symlink in symlinks:
