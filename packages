@@ -1,2 +1,12 @@
 i3
 polybar
+xorg-server
+xorg-xinit
+neovim
+feh
+alacritty
+fish
+picom
+ttf-jetbrains-mono-nerd
+lazygit
+numlockx
