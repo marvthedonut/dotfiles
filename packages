@@ -1,5 +1,6 @@
 i3
 polybar
+rofi
 xorg-server
 xorg-xinit
 neovim
