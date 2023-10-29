@@ -11,3 +11,4 @@ True ~/dotfiles/config/neovim ~/.config/nvim/init.lua
 True ~/dotfiles/config/neovim ~/.config/nvim/lazy-lock.json
 True ~/dotfiles/config/alacritty ~/.config/alacritty/alacritty.yml
 False /home/snoopy/dotfiles/config/Spotify /home/snoopy/.config/spicetify
+True /home/snoopy/dotfiles/config/discord /home/snoopy/.config/BetterDiscord/themes/midnight.theme.css
