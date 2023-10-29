@@ -10,3 +10,4 @@ True ~/dotfiles/config/wallpapers ~/Downloads/yxuve5xdpmq91.jpg
 True ~/dotfiles/config/neovim ~/.config/nvim/init.lua
 True ~/dotfiles/config/neovim ~/.config/nvim/lazy-lock.json
 True ~/dotfiles/config/alacritty ~/.config/alacritty/alacritty.yml
+False /home/snoopy/dotfiles/config/Spotify /home/snoopy/.config/spicetify
