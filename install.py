@@ -27,14 +27,16 @@ def gen_symlinks(symlinks):
         if os.path.exists(symlink) and os.path.islink(symlink):
             os.system(f"sudo rm -rf {symlink}")
 
-        subprocess.call(["sudo","ln", "-s", os.path.join(link[0],os.path.basename(symlink)), symlink])
+        if link[1]:
+            subprocess.call(["sudo","ln", "-s", os.path.join(link[0],os.path.basename(symlink)), symlink])
+        else:
+            subprocess.call(["sudo", "ln", "-s", link[0], symlink])
 
 
 def make_dirs(symlinks):
     for link in symlinks:
         symlink = symlinks[link]
         path = os.path.dirname(link)
-        print(os.path.dirname(link))
         if not os.path.exists(path):
             print(f"Making path {path}")
             os.system(f"sudo mkdir -p {path}")
@@ -50,6 +52,8 @@ def get_symlinks():
     symlinks = {}
     for link in symlink:
         link_parsed = link.replace("~", os.path.expanduser("~")).split(" ")
+        # First in array is where in config it is 
+        # Second is whether it is not a folder
         symlinks[link_parsed[2]] = [link_parsed[1], link_parsed[0] == "True"]
         print(f"Got symlink {link_parsed[2]}")
     print(f"Serialized {len(symlinks)} symlinks")
