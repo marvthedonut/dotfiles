@@ -7,6 +7,7 @@ True ~/dotfiles/config/picom ~/.config/picom/picom.conf
 True ~/dotfiles/config/picom ~/.config/picom/launch.sh
 True ~/dotfiles/config/i3 ~/.config/i3/config
 True ~/dotfiles/config/wallpapers ~/Downloads/yxuve5xdpmq91.png
+True ~/dotfiles/config/wallpapers ~/Downloads/lockscreen.png
 True ~/dotfiles/config/neovim ~/.config/nvim/init.lua
 True ~/dotfiles/config/neovim ~/.config/nvim/lazy-lock.json
 True ~/dotfiles/config/alacritty ~/.config/alacritty/alacritty.yml
