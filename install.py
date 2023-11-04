@@ -24,8 +24,8 @@ def gen_symlinks(symlinks):
     for symlink in symlinks:
         link = symlinks[symlink]
         print(f"Trying to create symbolic link for {symlink}")
-        if os.path.exists(symlink):
-            os.system(f"sudo rm {symlink}")
+        if os.path.exists(symlink) and os.path.islink(symlink):
+            os.system(f"sudo rm -rf {symlink}")
 
         subprocess.call(["sudo","ln", "-s", os.path.join(link[0],os.path.basename(symlink)), symlink])
 
