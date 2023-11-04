@@ -13,7 +13,7 @@ def main():
     install_packages(packages)
 
 def install_packages(packages):
-    os.system("sudo pacman -Sy --noconfirm " + " ".join(packages))
+    os.system("sudo pacman -Sy --noconfirm --needed " + " ".join(packages))
 
 def get_packages():
     with open("packages") as f:
