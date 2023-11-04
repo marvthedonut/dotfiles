@@ -12,3 +12,4 @@ True ~/dotfiles/config/neovim ~/.config/nvim/lazy-lock.json
 True ~/dotfiles/config/alacritty ~/.config/alacritty/alacritty.yml
 False ~/dotfiles/config/Spotify ~/.config/spicetify
 True ~/dotfiles/config/discord ~/.config/BetterDiscord/themes/midnight.theme.css
+False ~/dotfiles/config/discord ~/.config/BetterDiscord/plugins
