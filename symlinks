@@ -6,9 +6,10 @@ True ~/dotfiles/config/polybar /etc/polybar/config.ini
 True ~/dotfiles/config/picom ~/.config/picom/picom.conf
 True ~/dotfiles/config/picom ~/.config/picom/launch.sh
 True ~/dotfiles/config/i3 ~/.config/i3/config
-True ~/dotfiles/config/wallpapers ~/Downloads/yxuve5xdpmq91.jpg
-True ~/dotfiles/config/neovim ~/.config/nvim/init.lua
-True ~/dotfiles/config/neovim ~/.config/nvim/lazy-lock.json
+True ~/dotfiles/config/wallpapers ~/Downloads/yxuve5xdpmq91.png
+True ~/dotfiles/config/wallpapers ~/Downloads/lockscreen.png
+False ~/dotfiles/config/neovim ~/.config/nvim
 True ~/dotfiles/config/alacritty ~/.config/alacritty/alacritty.yml
-False /home/snoopy/dotfiles/config/Spotify /home/snoopy/.config/spicetify
-True /home/snoopy/dotfiles/config/discord /home/snoopy/.config/BetterDiscord/themes/midnight.theme.css
+False ~/dotfiles/config/Spotify/spicetify ~/.config/spicetify
+True ~/dotfiles/config/discord ~/.config/BetterDiscord/themes/midnight.theme.css
+False ~/dotfiles/config/discord/plugins ~/.config/BetterDiscord/plugins

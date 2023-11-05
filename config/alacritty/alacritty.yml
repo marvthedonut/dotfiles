@@ -1,2 +1,6 @@
 shell:
   program: /usr/bin/fish
+font:
+  normal:
+    family: JetBrainsMono NF
+    style: Regular
