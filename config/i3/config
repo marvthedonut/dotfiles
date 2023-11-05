@@ -195,7 +195,7 @@ for_window [class=".*"] border pixel 0
 #smart_borders on
 
 exec_always --no-startup-id /etc/polybar/launch.sh
-exec_always feh --bg-fill $HOME/Downloads/yxuve5xdpmq91.png
+exec_always feh --bg-fill $HOME/Downloads/yxuve5xdpmq91.jpg
 exec_always --no-startup-id ~/.config/picom/launch.sh
 
 bindsym $mod+F2 exec firefox
