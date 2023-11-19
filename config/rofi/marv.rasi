@@ -36,12 +36,10 @@ window {
 }
 
 mainbox {
-    border:  0;
-    padding: 0;
+    padding: 10px;
 }
 
 message {
-    border:       0 ;
     padding:      1px ;
 }
 
@@ -51,9 +49,8 @@ textbox {
 
 listview {
     fixed-height: 0;
-    border:       0;
     spacing:      2px ;
-    scrollbar:    true;
+    scrollbar:    false;
     padding:      2px 0px 0px ;
 }
 
@@ -79,14 +76,6 @@ element.selected {
     background-color: @selected-active-background;
 }
 
-scrollbar {
-    width:        4px ;
-    border:       0;
-    handle-color: @normal-foreground;
-    handle-width: 8px ;
-    padding:      0;
-}
-
 button {
     spacing:    0;
     text-color: @normal-foreground;
@@ -101,6 +90,7 @@ inputbar {
     spacing:    0;
     text-color: @normal-foreground;
     padding:    1px ;
+	margin: 0 0 10px 0;
 }
 
 case-indicator {
