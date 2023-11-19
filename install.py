@@ -40,7 +40,8 @@ def make_dirs(symlinks):
         path = os.path.dirname(link)
         if not os.path.exists(path):
             print(f"Making path {path}")
-            os.system(f"mkdir -p {path}")
+            os.system(f"sudo mkdir -p {path}")
+            os.system(f"sudo chown -R \"$USER:\" {path}")
 
 
 
