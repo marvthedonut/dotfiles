@@ -41,7 +41,6 @@ def make_dirs(symlinks):
         if not os.path.exists(path):
             print(f"Making path {path}")
             os.system(f"sudo mkdir -p {path}")
-            os.system(f"sudo chown snoopy {path}/*")
 
 
 
