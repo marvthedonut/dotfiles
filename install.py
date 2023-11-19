@@ -6,6 +6,7 @@ directory = 'config'
 
 
 def main():
+
     symlinks = get_symlinks()
     make_dirs(symlinks)
     gen_symlinks(symlinks)
@@ -40,6 +41,7 @@ def make_dirs(symlinks):
         if not os.path.exists(path):
             print(f"Making path {path}")
             os.system(f"sudo mkdir -p {path}")
+            os.system(f"sudo chown snoopy {path}")
 
 
 
