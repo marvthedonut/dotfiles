@@ -29,9 +29,9 @@ def gen_symlinks(symlinks):
             os.system(f"sudo rm -rf {symlink}")
 
         if link[1]:
-            subprocess.call(["ln", "-s", os.path.join(link[0],os.path.basename(symlink)), symlink])
+            subprocess.call(["sudo", "ln", "-s", os.path.join(link[0],os.path.basename(symlink)), symlink])
         else:
-            subprocess.call(["ln", "-s", link[0], symlink])
+            subprocess.call(["sudo", "ln", "-s", link[0], symlink])
 
 
 def make_dirs(symlinks):
