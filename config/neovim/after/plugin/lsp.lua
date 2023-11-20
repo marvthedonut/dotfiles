@@ -27,23 +27,41 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
 require('mason').setup()
-require('mason-lspconfig').setup_handlers({
-	function(server_name)
-		require('lspconfig')[server_name].setup {
-			on_attach = on_attach,
-			capabilties = capabilities,
-		}
-	end,
+require('mason-lspconfig').setup({
+	ensure_installed = {
+		"tsserver",
+	},
+	handlers = {
+		function(server_name)
+			require('lspconfig')[server_name].setup {
+				on_attach = on_attach,
+				capabilties = capabilities,
+			}
+		end,
 
-	["lua_ls"] = function()
-		require("neodev").setup()
-		require("lspconfig").lua_ls.setup {
-			on_attach = on_attach,
-			capabilities = capabilities,
-			Lua = {
-				workspace = { checkThirdParty = false },
-				telemetry = { enable = false }
-			},
-		}
-	end
+		["lua_ls"] = function()
+			require("neodev").setup()
+			require("lspconfig").lua_ls.setup {
+				on_attach = on_attach,
+				capabilities = capabilities,
+				Lua = {
+					workspace = { checkThirdParty = false },
+					telemetry = { enable = false }
+				},
+			}
+		end,
+		["tsserver"] = function()
+			require("lspconfig").tsserver.setup({
+				on_attach = on_attach,
+				capabilities = capabilities,
+				filetypes = { "typescript" },
+				cmd = { "typescript-language-server", "--stdio" },
+				settings = {
+					completions = {
+						completeFunctionCalls = true
+					}
+				}
+			})
+		end
+	}
 })

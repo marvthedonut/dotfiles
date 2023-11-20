@@ -7,7 +7,7 @@ luasnip.config.setup {}
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
-cmp.setup {
+cmp.setup({
 	snippet = {
 		expand = function(args)
 			luasnip.lsp_expand(args.body)
@@ -42,8 +42,9 @@ cmp.setup {
 			end
 		end, {'i', 's'}),
 	},
-	sources = {
+	sources = cmp.config.sources({
 		{ name = 'nvim_lsp' },
 		{ name = 'luasnip' },
-	},
-}
+		{ name = "buffer" }
+	}),
+})
