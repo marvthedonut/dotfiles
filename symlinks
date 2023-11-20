@@ -17,3 +17,4 @@ True /home/snoopy/dotfiles/config/fish /home/snoopy/.config/fish/functions/fish_
 True /home/snoopy/dotfiles/config/rofi /home/snoopy/.config/rofi/config.rasi
 True /home/snoopy/dotfiles/config/rofi /usr/share/rofi/themes/marv.rasi
 True /home/snoopy/dotfiles/config/fish /home/snoopy/.config/fish/config.fish
+True /home/snoopy/dotfiles/config/fish /home/snoopy/.config/starship.toml
