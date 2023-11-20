@@ -40,7 +40,7 @@ def make_dirs(symlinks):
         path = os.path.dirname(link)
         if not os.path.exists(path):
             print(f"Making path {path}")
-            subprocess.call(["sudo" "mkdir" "-p" "path"])
+            subprocess.call(["sudo", "mkdir", "-p", "path"])
             subprocess.call(["sudo", "chown", "-R", "\"$USER:\"", path])
 
 
