@@ -16,3 +16,4 @@ False ~/dotfiles/config/discord/plugins ~/.config/BetterDiscord/plugins
 True /home/snoopy/dotfiles/config/fish /home/snoopy/.config/fish/functions/fish_greeting.fish
 True /home/snoopy/dotfiles/config/rofi /home/snoopy/.config/rofi/config.rasi
 True /home/snoopy/dotfiles/config/rofi /usr/share/rofi/themes/marv.rasi
+True /home/snoopy/dotfiles/config/fish /home/snoopy/.config/fish/config.fish
