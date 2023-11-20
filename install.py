@@ -35,12 +35,13 @@ def gen_symlinks(symlinks):
 
 
 def make_dirs(symlinks):
+    user = os.environ.get("USER")
     for link in symlinks:
         symlink = symlinks[link]
         path = os.path.dirname(link)
         if not os.path.exists(path):
             print(f"Making path {path}")
-            os.system(f"sudo mkdir -p {path} && sudo chown -R {os.environ.get("USER")}: {path}")
+            os.system(f"sudo mkdir -p {path} && sudo chown -R {user}: {path}")
             #subprocess.call(["sudo", "chown", "-R", os.environ.get("USER") + ":", path])
 
 
