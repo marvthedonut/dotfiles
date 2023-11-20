@@ -12,6 +12,13 @@ def main():
     gen_symlinks(symlinks)
     packages = get_packages()
     install_packages(packages)
+    chown_dirs(symlinks)
+
+def chown_dirs(symlinks):
+    for link in symlinks:
+        symlink = symlinks[link]
+        path = os.path.dirname(link)
+        os.system(f"sudo chown -R \"$USER:\" {path}")
 
 def install_packages(packages):
     os.system("sudo pacman -Sy --noconfirm --needed " + " ".join(packages))
@@ -41,8 +48,7 @@ def make_dirs(symlinks):
         path = os.path.dirname(link)
         if not os.path.exists(path):
             print(f"Making path {path}")
-            os.system(f"sudo mkdir -p {path} && sudo chown -R {user}: {path}")
-            #subprocess.call(["sudo", "chown", "-R", os.environ.get("USER") + ":", path])
+            os.system(f"sudo mkdir -p {path}")
 
 
 
