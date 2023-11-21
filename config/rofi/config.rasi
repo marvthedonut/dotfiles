@@ -1,7 +1,7 @@
 configuration {
 	display-drun: "Applications";
 	modes: "window,drun,run,ssh";
-	font: "JetBrainsMono Nerd Font 12";
+	font: "JetBrainsMono NF 12";
 	icon-theme: "Papirus";
 	timeout {
       action: "kb-cancel";
