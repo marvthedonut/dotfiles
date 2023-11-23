@@ -5,7 +5,7 @@
 add_newline = true
 
 format = '''
-[╭───󰁔 ](bold cyan)$sudo$username@$hostname$directory$git_branch$git_status$python$nodejs$lua
+[╭───󰁔 ](bold cyan)$sudo$username@$hostname$directory$git_branch$git_status$python$nodejs$lua$cmd_duration
 [╰─](bold cyan)$character'''
 
 # Replace the '❯' symbol in the prompt with '➜'
