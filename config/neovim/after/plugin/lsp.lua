@@ -62,6 +62,9 @@ require('mason-lspconfig').setup({
 					}
 				}
 			})
+		end,
+		["pylsp"] = function()
+			require("lspconfig").pylsp.setup({})
 		end
 	}
 })
