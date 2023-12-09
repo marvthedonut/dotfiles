@@ -4,7 +4,7 @@
 RES=$(xdpyinfo | grep dimensions | cut -d\  -f7)
 RES_COLON=$(sed s/x/:/g<<<"$RES")
 LOCKSCREEN="lockscreen.png"
-WALLPAPER="yxuve5xdpmq91.png"
+WALLPAPER="jwst-wallpaper-cropped.png"
 
 echo Got res $RES_COLON
 
