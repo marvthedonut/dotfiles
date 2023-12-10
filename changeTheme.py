@@ -3,6 +3,7 @@ import os
 
 
 def main(args):
+    os.chdir(os.path.dirname(__file__))
     if len(args) <= 1:
         print("Pass in wallpaper to change to")
         return
@@ -22,7 +23,7 @@ def main(args):
     os.system(f"sudo ln -s {wallpaperPath} ~/Downloads/wallpaper.png")
     os.system(f"sudo ln -s {colorsPath} /etc/polybar/colors.ini")
 
-
+    os.system("./lockscreen-gen.sh")
 
 
 if __name__ == "__main__":
