@@ -195,7 +195,7 @@ for_window [class=".*"] border pixel 0
 #smart_borders on
 
 exec_always --no-startup-id /etc/polybar/launch.sh
-exec_always feh --bg-fill $HOME/Downloads/jwst-wallpaper-cropped.png
+exec_always feh --bg-fill $HOME/Downloads/wallpaper.png
 exec_always --no-startup-id ~/.config/picom/launch.sh
 exec --no-startup-id ~/dotfiles/lock.sh
 
