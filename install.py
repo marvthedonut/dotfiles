@@ -6,6 +6,7 @@ directory = 'config'
 
 
 def main():
+    os.chdir(os.path.dirname(__file__))
     if os.path.dirname(os.path.abspath(__file__)) != f"/home/{getpass.getuser()}/dotfiles":
         print("Folder is not in home directory")
         return
