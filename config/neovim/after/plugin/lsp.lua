@@ -65,6 +65,9 @@ require('mason-lspconfig').setup({
 		end,
 		["pylsp"] = function()
 			require("lspconfig").pylsp.setup({})
+		end,
+		["bashls"] = function()
+			require("lspconfig").bashls.setup({})
 		end
 	}
 })
