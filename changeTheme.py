@@ -25,6 +25,8 @@ def main(args):
 
     os.system("./lockscreen-gen.sh")
 
+    os.system("i3 restart")
+
 
 if __name__ == "__main__":
     main(sys.argv)
