@@ -68,6 +68,9 @@ require('mason-lspconfig').setup({
 		end,
 		["bashls"] = function()
 			require("lspconfig").bashls.setup({})
+		end,
+		["clangd"] = function()
+			require("lspconfig").clangd.setup({})
 		end
 	}
 })
