@@ -200,7 +200,7 @@ exec_always --no-startup-id ~/.config/picom/launch.sh
 exec --no-startup-id ~/dotfiles/lock.sh
 
 bindsym $mod+F2 exec firefox
-bindsym $mod+d exec rofi -show-icons -show drun
+bindsym $mod+d exec ~/dotfiles/scripts/RofiScripts
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86Tools exec ~/dotfiles/lock.sh
 bindsym Super_L exec rofi -show-icons -show drun
