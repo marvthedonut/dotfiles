@@ -16,3 +16,5 @@ fastfetch
 xorg-xdpyinfo
 imagemagick
 starship
+zoxide
+fzf
