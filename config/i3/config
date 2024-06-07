@@ -199,7 +199,7 @@ exec_always feh --bg-fill $HOME/Downloads/wallpaper.png
 exec_always --no-startup-id ~/.config/picom/launch.sh
 exec --no-startup-id ~/dotfiles/lock.sh
 
-bindsym $mod+F2 exec firefox
+bindsym $mod+F2 exec brave
 bindsym $mod+d exec ~/dotfiles/scripts/RofiScripts
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86Tools exec ~/dotfiles/lock.sh
