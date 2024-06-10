@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <strings.h>
 #include <wordexp.h>
 
+char* ExecuteRofi(char* command);
+int GetIndex(char* str, char* array[], int size);
 char* Concat(char* str1, char* str2);
 int SplitString(char* str, char* delim, char* array[]);
 char* ReadFile(char *filename);
@@ -12,16 +15,22 @@ int main(int argc, char *argv[])
 	const int lineCount = 3;
 	char *lines[lineCount];
 	char *parsedData[lineCount][2];
+
+	char* scriptNames[lineCount];
+	char* scriptCommands[lineCount];
+
 	wordexp_t exp_res;
 
 	wordexp("~/dotfiles/scripts/scripts", &exp_res, 0);
 	char *scriptsFile = ReadFile(exp_res.we_wordv[0]);
 
-	printf("Got scripts file contents\n%s", scriptsFile);
+	printf("Got scripts file contents\n");
 	SplitString(scriptsFile, "\n", lines);
 
 	for (int i = 0; i < lineCount; i++) {
 		SplitString(lines[i], ";", parsedData[i]);
+		scriptNames[i] = parsedData[i][1];
+		scriptCommands[i] = parsedData[i][0];
 	}
 
 
@@ -40,13 +49,19 @@ int main(int argc, char *argv[])
 		coal = buf2;
 	}
 
-	printf("%s\n", coal);
-
 	buf1 = Concat("echo \"", coal);
 	char *command = Concat(buf1, "\" | rofi -dmenu -p \"Scripts\"");
-	printf("%s\n", command);
 
-	int status = system(command);
+	// int index = GetIndex(command, scriptNames, lineCount);
+
+	char* selectedScriptName = strtok(ExecuteRofi(command), "\n");
+
+	int index = GetIndex(selectedScriptName, scriptNames, lineCount);
+	char* selectedCommand = scriptCommands[index];
+	
+	printf("%i\n", index);
+
+	int status = system(Concat("./", selectedCommand));
 	
 	free(scriptsFile);
 	free(coal);
@@ -54,6 +69,46 @@ int main(int argc, char *argv[])
 	free(command);
 	wordfree(&exp_res);
 	return 0;
+}
+
+char* ExecuteRofi(char* command)
+{
+	char* data = "";
+	FILE* pipe = popen(command, "r");
+	const int max_buf = 256;
+	char buffer[max_buf];
+
+	if (!pipe)
+	{
+		printf("Popen failed\n");
+		exit(-1);
+	}
+
+	while (!feof(pipe))
+	{
+		if (fgets(buffer, max_buf, pipe) != NULL)
+			data = Concat(data, &buffer[0]);
+	}
+
+	pclose(pipe);
+
+	return data;
+}
+
+int GetIndex(char* str, char* array[], int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		char* indexedStr = array[i];
+
+		if (strcmp(str, indexedStr) == 0)
+		{
+			printf("%s ; %s\n", str, indexedStr);
+			return i;
+		}
+	}
+
+	return -1;
 }
 
 char* Concat(char* str1, char* str2)
