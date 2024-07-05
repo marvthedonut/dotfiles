@@ -42,7 +42,7 @@ def gen_symlinks(symlinks):
             if not os.path.islink(symlink):
                 os.system(f"sudo rm -rf {symlink}")
             else:
-                return
+                continue
 
         if link[1]:
             subprocess.call(["sudo", "ln", "-s", os.path.join(link[0], os.path.basename(symlink)), symlink])
