@@ -197,7 +197,7 @@ for_window [class=".*"] border pixel 0
 exec_always --no-startup-id /etc/polybar/launch.sh
 exec_always feh --bg-fill $HOME/Downloads/wallpaper.png
 exec_always --no-startup-id ~/.config/picom/launch.sh
-exec --no-startup-id ~/dotfiles/lock.sh
+#exec --no-startup-id ~/dotfiles/lock.sh
 
 bindsym $mod+F2 exec brave
 bindsym $mod+d exec ~/dotfiles/scripts/ScriptParser
